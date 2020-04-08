@@ -6,7 +6,6 @@ import SearchBar from '../SearchBar/SearchBar'
 import Yelp from '../../util/Yelp'
 
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +22,7 @@ class App extends React.Component {
       }
     )
   }
+
 
   render() {
     return (
