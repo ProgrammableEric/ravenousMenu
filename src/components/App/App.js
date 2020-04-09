@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
+import logo from '../../assets/soup.png';
 import './App.css';
 import BusinessList from '../BusinessList/BusinessList'
 import SearchBar from '../SearchBar/SearchBar'
@@ -26,8 +26,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="App">
-        <h1>ravenous</h1>
+      <div className="App">
+        <div className="header">
+          <img src={logo} alt="logo" className="logo"/>
+          <span className="title">ravenous</span>
+        </div>
         <SearchBar searchYelp={this.searchYelp}/>
         <BusinessList businesses={this.state.businesses} />
       </div>
