@@ -43,40 +43,14 @@
     margin-bottom: 2.88rem;
   }
   
-  .SearchBar-fields .Bname,
-  .SearchBar-fields .Where  {
+  .SearchBar-fields input {
     width: 21rem;
     padding: .66rem 1rem;
+    margin-right: 2.22rem;
     border: 1px solid #fff;
     border-radius: 4px;
     font-size: .77rem;
     font-weight: 500;
-  }
-
-  .SearchBar-fields .Bname {
-    margin-right: 2.22rem;
-  }
-
-  .Where {
-    display: inline-block;
-    background-color: white;
-  }
-
-  .Where .pin {
-    margin: 0;
-    padding: 0;
-    /* vertical-align: center; */
-    height: 1rem;
-    width: 1rem;
-  }
-
-  .Where input {
-    /* vertical-align: center; */
-    border: none;
-    font-size: .77rem;
-    font-weight: 500;
-    margin-left: 10px;
-    height: 100%;
   }
   
   .SearchBar-fields input:last-child {
