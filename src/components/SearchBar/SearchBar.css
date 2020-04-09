@@ -43,18 +43,31 @@
     margin-bottom: 2.88rem;
   }
   
-  .SearchBar-fields input {
+  .SearchBar-fields .Term,
+  .SearchBar-fields .LocationWrapper {
     width: 21rem;
     padding: .66rem 1rem;
-    margin-right: 2.22rem;
     border: 1px solid #fff;
     border-radius: 4px;
     font-size: .77rem;
     font-weight: 500;
+    background-color: white;
+  }
+
+  .SearchBar-fields .Term {
+    margin-right: 2.22rem;
   }
   
-  .SearchBar-fields input:last-child {
-    margin-right: 0;
+  .LocationWrapper .pin {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.6rem;
+  }
+
+  .LocationWrapper input {
+    border: none;
+    font-size: .77rem;
+    font-weight: 500;
   }
   
   .SearchBar-submit {

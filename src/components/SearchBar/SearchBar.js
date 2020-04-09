@@ -1,6 +1,7 @@
 import React from 'react'
 import './SearchBar.css'
-import GMap from '../../util/GoogleMap';
+import GMap from '../../util/GoogleMap'
+import pin from '../../assets/pin.png'
 
 
 
@@ -22,11 +23,15 @@ class SearchBar extends React.Component {
             'Most Reviewed': 'review_count' 
         }
         this.handleSearch = this.handleSearch.bind(this);
-        
+        this.searchGMap = this.searchGMap.bind(this);
     }
 
-    autoComplete(term) {
-        
+    searchGMap(term) {
+        GMap.autoComplete(term).then(
+            (predictions) => {
+                this.setState( {predictions: predictions} );
+            }
+        );
     }
 
     getSortByClass(sortByOption) {
@@ -51,7 +56,7 @@ class SearchBar extends React.Component {
     
     handleLocationChange(event) {
         this.setState({ location: event.target.value});
-
+        this.searchGMap( event.target.value );
     }
 
     renderSortByOptions() {
@@ -76,8 +81,11 @@ class SearchBar extends React.Component {
                     </ul>
                 </div>
                 <div className="SearchBar-fields"> 
-                    <input placeholder="Search Businesses" onChange={this.handleTermChange} />
-                    <input placeholder="Where?" onChange={this.handleLocationChange}/>
+                    <input className="Term" placeholder="Search Businesses" onChange={this.handleTermChange} />
+                    <div className="LocationWrapper">
+                        <img src={pin} alt="pin icon" className="pin"/>
+                        <input placeholder="Where?" onChange={this.handleLocationChange}/>
+                    </div>
                 </div>
                 <div className="SearchBar-submit">
                     <a onClick={this.handleSearch}>Let's Go</a>
