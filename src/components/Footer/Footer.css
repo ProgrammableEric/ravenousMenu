@@ -1,0 +1,112 @@
+.footer {
+    background-color: black;
+    color: white;
+    /* width: 100%; */
+    padding: 2rem 4rem;
+}
+
+.FooterWrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px){
+    .FooterWrapper {
+        width: 1050px;
+    }
+}
+
+.footerIcon  {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.upperFooter {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid white;
+}
+
+.siteName {
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+    margin-right: 13rem;
+}
+
+.siteName .logo {
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+
+.siteName span {
+    vertical-align: middle;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.About, 
+.Help {
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 2rem;
+    margin-top: 0.8rem;
+}
+
+.About a, 
+.Help a {
+    box-sizing: border-box;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.listTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.About a:hover, 
+.Help a:hover {
+    border-bottom: 1px solid white;
+}
+
+.lowerFooter {
+    padding-top: 2rem;
+    width: 100%;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+.icons {
+    display: inline-block;
+}
+
+.icons img {
+    margin-right: 1rem;
+}
+
+.links {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.links a {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.links a:hover {
+    border-bottom: 1px solid white;
+}
+

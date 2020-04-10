@@ -14,6 +14,7 @@ class SearchBar extends React.Component {
             term: '',
             location: '',
             sortBy: 'best_match',
+            limit: 15,
             predictions: [], 
             show: false
         };
@@ -43,7 +44,7 @@ class SearchBar extends React.Component {
     }
 
     handleSearch(event) { 
-        this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+        this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy, this.state.limit);
         event.preventDefault();
     }
 
@@ -113,6 +114,7 @@ class SearchBar extends React.Component {
                     <div className="LocationWrapper">
                         <img src={pin} alt="pin icon" className="pin"/>
                         <input placeholder="Where?" onChange={this.handleLocationChange} value={this.state.location}/>
+                        {/* 注意update 的方法 */}
                     </div>
                     
                     {   this.state.show ? (
@@ -136,3 +138,5 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar
+
+
