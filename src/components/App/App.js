@@ -6,6 +6,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import Yelp from '../../util/Yelp';
 import Footer from '../Footer/Footer';
 import UpperBody from '../UpperBody/UpperBody';
+import LowerBody from '../LowerBody/LowerBody';
 
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       businesses: [],
+      showBusinesses: false,
     }; 
     this.searchYelp = this.searchYelp.bind(this);
   }
@@ -21,11 +23,14 @@ class App extends React.Component {
     Yelp.search(term, location, sortBy, limit).then(
       (businesses) => {
         this.setState( {businesses: businesses} );  
-      }
+        this.setState( {showBusinesses: true} );
+      } 
     )
   }
 
   render() {
+    const { showBusinesses } = this.state;
+
     return (
       <div className="App">
         <div className="header">
@@ -33,8 +38,14 @@ class App extends React.Component {
           <span>ravenous</span>
         </div>
         <SearchBar searchYelp={this.searchYelp}/>
-        <UpperBody />
-        <BusinessList businesses={this.state.businesses} />
+        { showBusinesses ? 
+            <BusinessList businesses={this.state.businesses} /> : 
+            ( <div className="BodyContent">
+                <UpperBody />
+                <LowerBody />
+              </div>
+            )
+        }
         <Footer />
       </div>
     )

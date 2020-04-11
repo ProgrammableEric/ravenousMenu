@@ -104,7 +104,7 @@ class SearchBar extends React.Component {
     
     render() {
         return (
-            <div className="searchBarWrapper">
+            <div className="searchBarWrapper" id="top">
             <div className="SearchBar" >
                 <div className="SearchBar-sort-options">
                     <ul>

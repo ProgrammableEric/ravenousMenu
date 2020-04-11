@@ -44,7 +44,7 @@ input:focus {
   vertical-align: middle;
   margin-right: 1rem;
   width: 2.2rem;
-    height: 2.2rem;
+  height: 2.2rem;
 }
 
 .header span {
@@ -52,4 +52,8 @@ input:focus {
   font-size: 2.2rem;
   font-weight: bolder;
   color: #fff;
+}
+
+.BodyContent {
+  width: 100%;
 }

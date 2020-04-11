@@ -8,7 +8,6 @@ import food6 from '../../assets/food-6.jpg';
 import './UpperBody.css';
 
 
-
 class UpperBody extends Component {
 
     constructor(props) {
@@ -73,15 +72,15 @@ class UpperBody extends Component {
                                 let background = {backgroundImage: `url(${item.img})`};
                                 return (
                                     <div className={`ListItem ${item.doubleWidth ? 'Double' : 'Single'}`}>
-                                        <a>
+                                        <a href="#top">
                                         <div className="ListItem-img" style={background}>
-                                        <div className="grayCover">
-                                            <span>{item.title}</span>
-                                        </div>
+                                            <div className="grayCover">
+                                                <span>{item.title}</span>
+                                            </div>
                                         </div>
                                         </a>
                                         <p className="ListItem-desc">{item.description}</p>
-                                        <a><p className="Jump">{item.jump}</p></a>
+                                        <a href="#top"><p className="Jump">{item.jump}</p></a>
                                     </div>
                                 );
                             })

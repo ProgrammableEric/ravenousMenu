@@ -1,0 +1,115 @@
+@import "bourbon/bourbon";
+
+.LowerBody {
+    width: 100%;
+    text-align: center;
+    background-color: #f0d601;
+    padding: 4rem 0 6rem;
+}
+
+.LowerBodyWrapper {
+    width: 90%;
+    margin: 2rem auto;
+    position: relative;
+}
+
+@media only screen and (min-width: 1300px) {
+    .LowerBodyWrapper {
+      width: calc(1300px*0.9);
+    }
+}
+
+.LowerBodyListWrapper {
+    box-sizing: border-box;
+    width: calc(100%/3);
+    padding: 0 1rem;
+    display: inline-block;
+    vertical-align: top;
+    transition: .5s ease;
+}
+
+.LowerBodyList {
+    width: 100%;
+    height: 100%;;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-position: top 0 left 0;
+    position: relative;
+}
+
+.LBListContent {
+    height: 12.5rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.left .LBListContent{
+    background-color: #de574a;
+}
+
+.middle .LBListContent{
+    background-color: #ff9a19;
+}
+
+.right .LBListContent{
+    background-color: #7d7d7d;
+}
+
+.LBListTitle {
+    margin: 0.8rem 1rem;
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+} 
+
+.LBListDescription{
+    margin: 0 1rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+}
+
+.ButtonWrapper {
+    width: 100%;
+    text-align: left;
+}
+
+.LBListContent button {
+    color: white;
+    background-color: #cca353;
+    font-size: 1rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 4px;
+    border: none;
+    font-weight: 500;
+    margin-left: 1rem;
+} 
+
+.left:hover {
+    width: 40%;
+}
+
+.left:hover + .middle,
+.left:hover + .right {
+    width: 20%;
+}
+
+.middle:hover {
+    width: 40%;
+}
+
+.middle:hover + .left,
+.middle:hover + .right {
+    width: 20%;
+}
+
+.right:hover {
+    width: 40%;
+}
+
+.right:hover + .left,
+.right:hover + .middle {
+    width: 20%;
+}

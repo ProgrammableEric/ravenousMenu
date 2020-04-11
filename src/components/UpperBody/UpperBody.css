@@ -37,6 +37,7 @@
 
 .ListItem a {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .Double {
@@ -56,7 +57,7 @@
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
-    line-height: 200px;
+    line-height: 180px;
     margin-bottom: 1rem;
 }
 
@@ -68,11 +69,7 @@
 .ListItem-img .grayCover:hover {
     background-color: gray;
     opacity: 65%;
-}
-
-.ListItem-img a:hover {
-    filter: grayscale(10%);
-    -webkit-filter: grayscale(10%);
+    transition: all 0.3s ease;  
 }
 
 .ListItem-img span {
@@ -85,7 +82,7 @@
 }
 
 .ListItem .ListItem-desc {
-    font-size: 18px;
+    font-size: 0.9rem;
 }
 
 .ListItem .Jump {
