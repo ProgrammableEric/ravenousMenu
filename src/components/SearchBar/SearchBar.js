@@ -72,6 +72,7 @@ class SearchBar extends React.Component {
 
     renderSortByOptions() {
         return Object.keys(this.sortByOptions).map(sortByOption => {
+            console.log("rednering sortby");
             let sortByOptionValue = this.sortByOptions[sortByOption];
             // class: Active or ''
             return (<li key={sortByOptionValue} 
@@ -103,10 +104,11 @@ class SearchBar extends React.Component {
     
     render() {
         return (
+            <div className="searchBarWrapper">
             <div className="SearchBar" >
                 <div className="SearchBar-sort-options">
                     <ul>
-                        {this.renderSortByOptions}
+                        {this.renderSortByOptions()}
                     </ul> 
                 </div>
                 <div className="SearchBar-fields"> 
@@ -115,9 +117,7 @@ class SearchBar extends React.Component {
                         <img src={pin} alt="pin icon" className="pin"/>
                         <input placeholder="Where?" onChange={this.handleLocationChange} value={this.state.location}/>
                         {/* 注意update 的方法 */}
-                    </div>
-                    
-                    {   this.state.show ? (
+                        {   this.state.show ? (
                         <div className="autoCompleteWrapper">
                             <ul className="autoCompleteList">
                                 {this.renderAutoComplete()}
@@ -128,10 +128,12 @@ class SearchBar extends React.Component {
                             </div> 
                         </div>   
                     ) : null}
+                    </div>
                 </div>
                 <div className="SearchBar-submit">
                     <a onClick={this.handleSearch}>Let's Go</a>
                 </div>
+            </div>
             </div>
       )
     }

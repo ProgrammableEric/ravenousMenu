@@ -1,12 +1,33 @@
+.searchBarWrapper {
+  height: 28rem;
+  overflow: hidden;
+  background-image: url('./background_search_desktop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* animation 前后的div size 是计算进去的
+transition 不改变div size */
+
 .SearchBar {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('./background_search_desktop.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 25rem;
+    height: 28rem;
+    width: 90%;
+    margin: 0 auto;
+    transition: all 0.5s ease;  
+}
+
+@media only screen and (min-width: 1300px) {
+  .SearchBar {
+    width: calc(1300px*0.9);
   }
+}
+
+.SearchBar:hover {
+  transform: scale(1.05);
+}
   
   .SearchBar-sort-options ul {
     display: flex;
@@ -58,6 +79,10 @@
   .SearchBar-fields .Term {
     margin-right: 2.22rem;
   }
+
+  .LocationWrapper {
+    position: relative;
+  }
   
   .LocationWrapper .pin {
     vertical-align: middle;
@@ -75,10 +100,13 @@
   }
 
   .autoCompleteWrapper {
+    border-left: 1px solid white;
+    /* border-right: 1px solid red; */
+    border-radius: 0 0 4px 4px;
     position: absolute;
     width: 23rem;
-    top: 2.65rem;
-    left: calc(50% + 1.11rem);
+    top: 100%;
+    left: 0;
     background-color: white;
   }
 
@@ -132,11 +160,12 @@
   .poweredBy span {
     font-size: 0.8rem;
     vertical-align: middle;
+    color: gray;
   }
 
   .poweredByIcon {
-    height: 1.3rem;
-    width: 1.3rem;
+    height: 1.1rem;
+    width: 1.1rem;
     margin: 0.2rem 1rem 0.2rem 0.5rem;
     vertical-align: middle;
   }
@@ -160,7 +189,7 @@
   }
   
   @media only screen and (max-width: 560px) {
-    .SearchBar {
+    .SearchBarWrapper {
       background-image: url('./background_search_mobile.jpg');
     }
   

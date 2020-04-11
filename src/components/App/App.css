@@ -35,7 +35,7 @@ input:focus {
 }
 
 .header {
-  padding: .66rem 0;
+  padding: .6rem 0;
   text-align: center;
   background-color: #cca353;
 }
@@ -43,13 +43,13 @@ input:focus {
 .header .logo {
   vertical-align: middle;
   margin-right: 1rem;
-  width: 2.5rem;
-    height: 2.5rem;
+  width: 2.2rem;
+    height: 2.2rem;
 }
 
 .header span {
   vertical-align: middle;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   font-weight: bolder;
   color: #fff;
 }

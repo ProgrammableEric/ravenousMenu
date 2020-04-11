@@ -17,22 +17,25 @@ class Footer extends Component {
                             <img className="logo" src={logo} alt="site logo"/>
                             <span>ravenous</span>
                         </div>
-                        <div className="About">
-                            <a href="" className="listTitle">About Ravenous</a>
-                            <a href="">Read our blog</a>
-                            <a href="">Buy gift card</a>
-                            <a href="">Create a business account</a>
-                            <a href="">Add your restaurant</a>
-                            <a href="">Sign up to deliver</a>
+                        <div className="AboutHelp">
+                            <div className="About">
+                                <a href="" className="listTitle">About Ravenous</a>
+                                <a href="">Read our blog</a>
+                                <a href="">Buy gift card</a>
+                                <a href="">Create a business account</a>
+                                <a href="">Add your restaurant</a>
+                                <a href="">Sign up to deliver</a>
+                            </div>
+                            <div className="Help">
+                                <a href="" className="listTitle">Get help</a>
+                                <a href="">Read FAQs</a>
+                                <a href="">View all cities</a>
+                                <a href="">View all countries</a>
+                                <a href="">Restaurants near me</a>
+                                <a href="">Change language</a>
+                            </div>
                         </div>
-                        <div className="Help">
-                            <a href="" className="listTitle">Get help</a>
-                            <a href="">Read FAQs</a>
-                            <a href="">View all cities</a>
-                            <a href="">View all countries</a>
-                            <a href="">Restaurants near me</a>
-                            <a href="">Change language</a>
-                        </div>
+                        <div className="clearFloat"></div>
                     </div>
                     <div className="lowerFooter">
                         <div className="icons">
