@@ -30,7 +30,7 @@ class LowerBody extends Component {
                 {
                     title: "Career",
                     img: career,
-                    description: "Our mission is to change the way people eat. It's ambitious, but so are we. And we need people like you.", 
+                    description: "Our mission is to change the way people eat. It's ambitious, but so are we. We need people like you.", 
                     jump: "Find out more",
                     id: 3,
                     position: 'right',
@@ -75,3 +75,6 @@ class LowerBody extends Component {
 
 
 export default LowerBody;
+
+
+// 设置lowerbodyItem 为flexbox, 改变一元素宽度，其他元素自适应
