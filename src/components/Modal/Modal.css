@@ -1,0 +1,110 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    z-index: 10;
+}
+.overlay.visible {
+    display: block;
+    visibility: visible;
+}
+
+.container {
+    margin: 10rem auto;
+    width: 60%;
+    height: 20rem;
+    background: #cca353;
+    border-radius: 6px;
+    padding: 1rem 1rem;
+    position: relative;
+}
+
+.modalHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modalHeader .logo {
+    vertical-align: middle;
+    margin-right: 1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.modalHeader span {
+    vertical-align: middle;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.modalHeader .closeModal {
+    text-decoration: none;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    margin-left: 1rem;
+    font-weight: 500;
+    position: absolute;
+    right: 1rem;
+    vertical-align: bottom;
+  }
+  
+  .modalHeader .closeModal:hover {
+    cursor: pointer;
+  }
+
+  .modalContent span {
+      display: inline-block;
+      font: Arial, sans-serif;
+      color: black;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+  }
+
+  .modalContent p {
+    font: Arial, sans-serif;
+    color: black;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .modalContent input {
+      width: 100%;
+      display: block;
+    padding: .66rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: .77rem;
+    font-weight: 500;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+  .modalContent button {
+      width: 100%;
+      display: block;
+      padding: .66rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: .77rem;
+    font-weight: 500;
+    background-color: white;
+    margin-bottom: 1rem;
+  }
+
+.modalContent .modalNote {
+    font-size: 0.8rem;
+}
+
+.modalNote a {
+    color: #4c8914;
+}

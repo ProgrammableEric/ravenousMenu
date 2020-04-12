@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer';
 import UpperBody from '../UpperBody/UpperBody';
 import LowerBody from '../LowerBody/LowerBody';
 import { tsImportEqualsDeclaration } from '@babel/types';
+import Modal from '../Modal/Modal';
 
 
 class App extends React.Component {
@@ -16,9 +17,12 @@ class App extends React.Component {
     this.state = {
       businesses: [],
       showBusinesses: false,
+      modalVisible: false,
     }; 
     this.searchYelp = this.searchYelp.bind(this);
     this.backToMain = this.backToMain.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
   
   searchYelp(term, location, sortBy, limit) {
@@ -34,15 +38,29 @@ class App extends React.Component {
     this.setState( {showBusinesses:false} );
   }
 
+  openModal() {
+    this.setState({ modalVisible:true });
+  }
+
+  closeModal() {
+    this.setState({ modalVisible:false })
+  }
+
   render() {
-    const { showBusinesses } = this.state;
+    const { showBusinesses, modalVisible } = this.state;
 
     return (
       <div className="App">
         <div className="header">
-          <img className="logo" src={logo} alt="site logo" onClick={this.backToMain}/>
-          <span onClick={this.backToMain}>ravenous</span>
+          <div className="headerWrapper">
+            <img className="logo" src={logo} alt="site logo" onClick={this.backToMain}/>
+            <span onClick={this.backToMain}>Ravenous</span>
+            <div className="HeaderButtons">
+              <a onClick={this.openModal} className="Sign In">Sign In</a>
+            </div>
+          </div>
         </div>
+        <Modal visible={modalVisible} onClose={this.closeModal}></Modal>
         <SearchBar searchYelp={this.searchYelp}/>
         { showBusinesses ? 
             <BusinessList businesses={this.state.businesses} /> : 

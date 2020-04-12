@@ -15,7 +15,7 @@ class Footer extends Component {
                     <div className="upperFooter">
                         <div className="siteName">
                             <img className="logo" src={logo} alt="site logo"/>
-                            <span>ravenous</span>
+                            <span>Ravenous</span>
                         </div>
                         <div className="AboutHelp">
                             <div className="About">

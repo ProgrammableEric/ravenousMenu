@@ -4,6 +4,7 @@
   background-image: url('./background_search_desktop.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 2.5rem;
 }
 
 /* animation 前后的div size 是计算进去的

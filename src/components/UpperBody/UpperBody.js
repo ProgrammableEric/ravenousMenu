@@ -71,7 +71,7 @@ class UpperBody extends Component {
                             UpperBodyList.map( (item) => {
                                 let background = {backgroundImage: `url(${item.img})`};
                                 return (
-                                    <div className={`ListItem ${item.doubleWidth ? 'Double' : 'Single'}`}>
+                                    <div className={`ListItem ${item.doubleWidth ? 'Double' : 'Single'}`} key={item.id}>
                                         <a href="#top">
                                         <div className="ListItem-img" style={background}>
                                             <div className="grayCover">

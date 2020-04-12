@@ -51,7 +51,7 @@ class LowerBody extends Component {
                         LowerBodyList.map( (item) => {
                             let background = {backgroundImage: `url(${item.img})`};
                             return(
-                                <div className={`LowerBodyListWrapper ${item.position}`}>
+                                <div className={`LowerBodyListWrapper ${item.position}`} key={item.id}>
                                 <div className='LowerBodyList'
                                      style={background}>
                                     <div className="LBListContent">
