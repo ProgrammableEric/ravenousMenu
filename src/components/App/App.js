@@ -7,6 +7,7 @@ import Yelp from '../../util/Yelp';
 import Footer from '../Footer/Footer';
 import UpperBody from '../UpperBody/UpperBody';
 import LowerBody from '../LowerBody/LowerBody';
+import { tsImportEqualsDeclaration } from '@babel/types';
 
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
       showBusinesses: false,
     }; 
     this.searchYelp = this.searchYelp.bind(this);
+    this.backToMain = this.backToMain.bind(this);
   }
   
   searchYelp(term, location, sortBy, limit) {
@@ -28,14 +30,18 @@ class App extends React.Component {
     )
   }
 
+  backToMain() {
+    this.setState( {showBusinesses:false} );
+  }
+
   render() {
     const { showBusinesses } = this.state;
 
     return (
       <div className="App">
         <div className="header">
-          <img className="logo" src={logo} alt="site logo"/>
-          <span>ravenous</span>
+          <img className="logo" src={logo} alt="site logo" onClick={this.backToMain}/>
+          <span onClick={this.backToMain}>ravenous</span>
         </div>
         <SearchBar searchYelp={this.searchYelp}/>
         { showBusinesses ? 

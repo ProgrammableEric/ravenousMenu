@@ -47,11 +47,19 @@ input:focus {
   height: 2.2rem;
 }
 
+.header .logo:hover {
+  cursor: pointer;
+}
+
 .header span {
   vertical-align: middle;
   font-size: 2.2rem;
   font-weight: bolder;
   color: #fff;
+}
+
+.header .span:hover {
+  cursor: pointer;
 }
 
 .BodyContent {
