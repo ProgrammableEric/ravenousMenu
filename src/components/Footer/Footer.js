@@ -42,7 +42,7 @@ class Footer extends Component {
                             <img className="footerIcon" src={facebook}/>
                             <img className="footerIcon" src={ins}/>
                             <img className="footerIcon" src={weibo}/>
-                            <img className="footerIcon" src={gitcat}/>
+                            <a className="linkToGit" href="https://github.com/ProgrammableEric/ravenousMenu"><img className="footerIcon" src={gitcat}/></a>
                         </div>
                         <div className="links">
                             <a href="">Privacy Policy</a>
