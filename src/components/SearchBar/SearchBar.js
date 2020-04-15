@@ -114,8 +114,10 @@ class SearchBar extends React.Component {
                 <div className="SearchBar-fields"> 
                     <input className="Term" placeholder="Search Businesses" onChange={this.handleTermChange} />
                     <div className="LocationWrapper">
+                        <div className="LocationInputWrapper">
                         <img src={pin} alt="pin icon" className="pin"/>
                         <input placeholder="Where?" onChange={this.handleLocationChange} value={this.state.location}/>
+                        </div>
                         {/* 注意update 的方法 */}
                         {   this.state.show ? (
                         <div className="autoCompleteWrapper">

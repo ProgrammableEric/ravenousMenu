@@ -81,6 +81,10 @@ transition 不改变div size */
     margin-right: 2.22rem;
   }
 
+  .LocationInputWrapper {
+    vertical-align: middle;
+  }
+
   .LocationWrapper {
     position: relative;
   }
@@ -203,9 +207,13 @@ transition 不改变div size */
       flex-direction: column;
       align-items: center;
     }
-  
-    .SearchBar-fields input {
+
+    .SearchBar-fields .Term {
       margin-right: 0;
       margin-bottom: .86rem;
+    }
+  
+    .SearchBar-fields .Term input {
+      margin-right: 0;
     }
   }
