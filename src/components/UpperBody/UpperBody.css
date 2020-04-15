@@ -68,10 +68,12 @@
 
 .ListItem-img .grayCover:hover {
     background-color: gray;
+    opacity: 65%;
     filter:alpha(opacity=65);       /* IE */
     -moz-opacity:0.65;              /* 老版Mozilla */
     -khtml-opacity:0.65;              /* 老版Safari */
-    opacity: 65%;
+    -webkit-opacity: 0.65;
+    /* filter: progid:DXImageTransform.Microsoft.Alpha(style = 0, opacity = 50); //IE4-IE9都支持滤镜写法progid:DXImageTransform.Microsoft.Alpha(Opacity=xx) */
     transition: all 0.3s ease;  
 }
 
