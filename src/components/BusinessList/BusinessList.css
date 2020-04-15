@@ -5,3 +5,23 @@
     margin: 4.4rem 10%;
     align-items: center;
   }
+
+  .BusinessList button {
+    opacity: 90%;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 4px;
+    padding: .72rem .6rem;
+    background-color: #cca353;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: background-color .5s;
+    outline:none;
+  }
+  
+  .BusinessList button:hover {
+    cursor: pointer;
+    background-color: #a7874b;
+  }

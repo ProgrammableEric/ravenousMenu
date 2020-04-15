@@ -63,7 +63,7 @@ class App extends React.Component {
         <Modal visible={modalVisible} onClose={this.closeModal}></Modal>
         <SearchBar searchYelp={this.searchYelp}/>
         { showBusinesses ? 
-            <BusinessList businesses={this.state.businesses} /> : 
+            <BusinessList businesses={this.state.businesses} backToMain={this.backToMain}/> : 
             ( <div className="BodyContent">
                 <UpperBody />
                 <LowerBody />
