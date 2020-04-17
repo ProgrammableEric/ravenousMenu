@@ -88,6 +88,12 @@
     transform: skew(0deg, -5deg);
 }
 
+@media only screen and (max-width: 1000px) {
+    .LBListDescription{
+        display: none;
+    }
+}
+
 .ButtonWrapper {
     width: 100%;
     text-align: left;

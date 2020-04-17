@@ -7,7 +7,6 @@ import Yelp from '../../util/Yelp';
 import Footer from '../Footer/Footer';
 import UpperBody from '../UpperBody/UpperBody';
 import LowerBody from '../LowerBody/LowerBody';
-import { tsImportEqualsDeclaration } from '@babel/types';
 import Modal from '../Modal/Modal';
 
 
