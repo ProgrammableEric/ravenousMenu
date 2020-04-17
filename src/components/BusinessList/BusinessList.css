@@ -6,8 +6,12 @@
     align-items: center;
   }
 
-  .BusinessList button {
+  .BusinessList .button {
     opacity: 90%;
+    filter:alpha(opacity=90);       /* IE */
+    -moz-opacity:0.90;              /* 老版Mozilla */
+    -khtml-opacity:0.90;              /* 老版Safari */
+    -webkit-opacity: 0.90;
     position: fixed;
     right: 1rem;
     bottom: 1rem;
@@ -21,7 +25,7 @@
     outline:none;
   }
   
-  .BusinessList button:hover {
+  .BusinessList .button:hover {
     cursor: pointer;
     background-color: #a7874b;
   }

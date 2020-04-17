@@ -16,7 +16,7 @@ class BusinessList extends React.Component {
                     return <Business business={business} key={business.id}/>
                 }
                 )}
-                <button onClick={backToMain}>Back to homepage</button>
+                <a className="button" onClick={backToMain}>Back to homepage</a>
             </div>
         )
     }
