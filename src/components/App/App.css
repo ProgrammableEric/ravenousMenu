@@ -39,6 +39,7 @@ input:focus {
   text-align: center;
   background-color: #cca353;
   position: fixed;
+  -webkit-transform: translateZ(0);
   width: 100%;
   opacity: 90%;
   filter:alpha(opacity=90);       /* IE */
