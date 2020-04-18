@@ -16,7 +16,9 @@ class SearchBar extends React.Component {
             sortBy: 'best_match',
             limit: 15,
             predictions: [], 
-            show: false
+            show: false,
+            placeBoxAlert: false, 
+            businessesBoxAlert: false 
         };
         this.handleTermChange = this.handleTermChange.bind(this);
         this.handleLocationChange = this.handleLocationChange.bind(this);
@@ -44,8 +46,17 @@ class SearchBar extends React.Component {
     }
 
     handleSearch(event) { 
-        this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy, this.state.limit);
-        event.preventDefault();
+        // todo: check both input boxes before submitting search request. 
+        let termCheck  = document.getElementById('termInput').value === '';   // true if empty
+        let placeCheck = document.getElementById('placeInput').value === '';  // true if empty
+        
+        if (termCheck) this.setState( {businessesBoxAlert: true} );
+        if (placeCheck) this.setState( {placeBoxAlert: true} );
+        
+        if (!termCheck && !placeCheck) {
+            this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy, this.state.limit);
+            event.preventDefault();
+        }
     }
 
     handleSortByChange(sortByOption) {
@@ -55,11 +66,13 @@ class SearchBar extends React.Component {
     }
 
     handleTermChange(event) {
-        this.setState({ term: event.target.value});
+        this.setState({ term: event.target.value, 
+                        businessesBoxAlert: false });
     }
     
     handleLocationChange(event) {
-        this.setState({ location: event.target.value});
+        this.setState({ location: event.target.value, 
+                        placeBoxAlert: false });
         this.searchGMap( event.target.value );
         this.state.show = true;
         if (!event.target.value) this.state.show = false;
@@ -103,6 +116,8 @@ class SearchBar extends React.Component {
     }
     
     render() {
+
+        const {placeBoxAlert, businessesBoxAlert} = this.state;
         return (
             <div className="searchBarWrapper" id="top">
             <div className="SearchBar" >
@@ -112,11 +127,11 @@ class SearchBar extends React.Component {
                     </ul> 
                 </div>
                 <div className="SearchBar-fields"> 
-                    <input className="Term" placeholder="Search Businesses" onChange={this.handleTermChange} />
-                    <div className="LocationWrapper">
+                    <input className={`Term ${businessesBoxAlert ? 'inputAlert' : ''}`} id="termInput" placeholder="Search Businesses" onChange={this.handleTermChange} />
+                    <div className={`LocationWrapper ${placeBoxAlert ? 'inputAlert' : ''}`} id={`${placeBoxAlert ? 'inputAlert' : ''}`}>
                         <div className="LocationInputWrapper">
-                        <img src={pin} alt="pin icon" className="pin"/>
-                        <input placeholder="Where?" onChange={this.handleLocationChange} value={this.state.location}/>
+                            <img src={pin} alt="pin icon" className="pin"/>
+                            <input placeholder="Where" id="placeInput" onChange={this.handleLocationChange} value={this.state.location}/>
                         </div>
                         {/* 注意update 的方法 */}
                         {   this.state.show ? (

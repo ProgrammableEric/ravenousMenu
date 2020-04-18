@@ -74,7 +74,16 @@ transition 不改变div size */
     border-radius: 4px;
     font-size: .77rem;
     font-weight: 500;
-    background-color: white;
+  }
+
+  .inputAlert, .inputAlert > div, .inputAlert input {
+    background-color: #ffdddd;
+    transition: all 0.5s ease;
+  }
+
+  #inputAlert {
+    background-color: #ffdddd;
+    transition: all 0.5s ease;
   }
 
   .SearchBar-fields .Term {
@@ -83,10 +92,12 @@ transition 不改变div size */
 
   .LocationInputWrapper {
     vertical-align: middle;
+    background: none;
   }
 
   .LocationWrapper {
     position: relative;
+    background-color: white;
   }
   
   .LocationWrapper .pin {
@@ -94,6 +105,7 @@ transition 不改变div size */
     width: 1rem;
     height: 1rem;
     margin-right: 0.6rem;
+    background-color: none;
   }
 
   .LocationWrapper input {
