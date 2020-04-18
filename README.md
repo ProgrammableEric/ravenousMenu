@@ -31,6 +31,7 @@ React, sass
 - [x] Search result presentation 
 - [x] Modal box 
 - [x] Several animation effects 
+- [x] Input check and alert before submitting search request 
 
 ### Author 
 - Eric Fu - [GitHub](https://github.com/ProgrammableEric)
